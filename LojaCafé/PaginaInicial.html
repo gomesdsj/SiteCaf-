@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja Alexandre Gomes</title>
+    <link rel="stylesheet" href="pginicial.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+        <section>
+            <a href="#Home" class="logo">
+                <img width="40px" height="40px" src="./LOGO-EXPRESSO-NO-PONTO.webp" alt="Logo" />
+            </a>
+
+            <!-- Menu hambúrguer para telas pequenas -->
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+
+            <nav class="navbar">
+                <a href="#Ofertas">Ofertas</a>
+                <a href="#Produtos">Produtos</a>
+                <a href="#Destaques">Destaques</a>
+                <a href="/PaginaLogin.html">Login</a> <!-- Link para sua página de login -->
+            </nav>
+
+            <div class="icons">
+                <img width="30" height="30" src="https://img.icons8.com/?size=100&id=7695&format=png&color=F0f0f0f"
+                    alt="search" />
+            </div>
+        </section>
+    </header>
+
+    <!-- Página inicial / seção de boas-vindas -->
+    <div class="home-container">
+        <section id="Home">
+            <div class="container-image">
+                <img src="./banner-2-produtos-1024x462.png" alt="Produto em Oferta" />
+            </div>
+            <div class="content">
+                <h3>Bem-vindo à nossa Loja!</h3>
+                <p>
+                    Loja especializada com os melhores produtos e ofertas para você.
+                    Explore nossas categorias e descubra novidades incríveis!
+                </p>
+                <a href="#Ofertas" class="btn">Ver Ofertas</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Seção Ofertas -->
+    <section id="Ofertas">
+        <h2 class="title">Nossas <span>Ofertas</span></h2>
+        <div class="row">
+            <div class="container-image">
+                <img src="./scr/img/Logo AG.png" alt="Produto em Oferta" />
+            </div>
+            <div class="content">
+                <h3>Descontos Imperdíveis!</h3>
+                <p>Aproveite promoções especiais em diversos produtos por tempo limitado.</p>
+                <a href="#Produtos" class="btn">Ver Produtos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="Produtos">
+        <h2 class="title">Nossos <span>Produtos</span></h2>
+        <div class="row">
+            <div class="container-image">
+                <img src="./scr/img/Logo AG.png" alt="Produto" />
+            </div>
+            <div class="content">
+                <h3>Produtos de Qualidade</h3>
+                <p>Selecionamos os melhores produtos para garantir a sua satisfação.</p>
+                <a href="#" class="btn">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Destaques -->
+    <section id="Destaques">
+        <h2 class="title">Produtos <span>Destaques</span></h2>
+        <div class="row">
+            <div class="container-image">
+                <img src="./scr/img/Logo AG.png" alt="Destaque" />
+            </div>
+            <div class="content">
+                <h3>Mais Vendidos</h3>
+                <p>Confira os produtos que são sucesso entre nossos clientes!</p>
+                <a href="#" class="btn">Descubra</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer style="text-align: center; padding: 20px; color: #fff;">
+        &copy; 2025 - Loja Alexandre Gomes. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        // Menu responsivo
+        const menuToggle = document.getElementById("menu-toggle");
+        const navbar = document.querySelector(".navbar");
+        menuToggle.addEventListener("click", () => {
+            navbar.classList.toggle("active");
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,279 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(210, 116, 22, 0.533);
+    --text-color: #fff;
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.barra-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--black); 
+    color: var(--main-color); 
+    text-align: between;
+    padding: 1rem 2rem;
+    border-bottom: var(--border); 
+    z-index: 1000;
+    font-size: 1.6rem;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.barra-superior a {
+    color: var(--main-color);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+
+.container-cadastro {
+    width: 700px;
+    max-width: 90%;
+    background: rgba(19, 19, 26, 0.8);
+    border: var(--border);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 3rem;
+    color: var(--text-color);
+}
+
+.container-cadastro h1 {
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--main-color);
+}
+
+.input-row {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-container {
+    flex: 1;
+}
+
+.input-container label {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+}
+
+.input-container input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: var(--border);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+}
+
+.input-container input:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(211, 173, 127, 0.5);
+}
+
+.submit-button {
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background: var(--main-color);
+    color: var(--black);
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+    background: #b38a5a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.footer a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #b38a5a;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .input-row {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container-cadastro {
+        padding: 2rem;
+    }
+
+    .container-cadastro h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Estilos específicos para a página de login */
+.container-login {
+    width: 500px;
+    max-width: 90%;
+    background: rgba(19, 19, 26, 0.8);
+    border: var(--border);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 3rem;
+    color: var(--text-color);
+}
+
+.container-login h1 {
+    font-size: 3.6rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--main-color);
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon img {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: invert(80%) sepia(39%) saturate(387%) hue-rotate(358deg) brightness(90%) contrast(86%);
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--main-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: #b38a5a;
+}
+
+/* Mantendo a consistência com a página de cadastro */
+.container-login .input-container {
+    margin-bottom: 2rem;
+}
+
+.container-login .input-container label {
+    display: block;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--main-color);
+}
+
+.container-login .input-container input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: var(--border);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    padding-right: 4rem;
+    /* Espaço para o ícone */
+}
+
+.container-login .input-container input:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(211, 173, 127, 0.5);
+}
+
+.container-login .submit-button {
+    width: 100%;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background: var(--main-color);
+    color: var(--black);
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.container-login .submit-button:hover {
+    background: #b38a5a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.container-login .footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.container-login .footer a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.container-login .footer a:hover {
+    text-decoration: underline;
+    color: #b38a5a;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container-login {
+        padding: 2rem;
+    }
+
+    .container-login h1 {
+        font-size: 2.8rem;
+    }
+}

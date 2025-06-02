@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="barra-superior">
+       <a href="/PaginaInicial.html">LOGO</a>
+    </header>
+    <main class="container-login">
+
+        <header>
+            <h1>Login</h1>
+        </header>
+
+        <section>
+            <form action="processa_login.php" method="POST">
+
+                <div class="input-container">
+                    <label for="email">Email:</label>
+                    <div class="input-with-icon">
+                        <input type="email" id="email" name="email" required>
+                        <img width="20" height="20" src="https://img.icons8.com/material-outlined/24/user--v1.png"
+                            alt="user--v1" />
+                    </div>
+                </div>
+
+                <div class="input-container">
+                    <label for="senha">Senha:</label>
+                    <div class="input-with-icon">
+                        <input type="password" id="senha" name="senha" required>
+                        <img width="20" height="20" src="https://img.icons8.com/ios/50/lock--v1.png" alt="lock--v1" />
+                    </div>
+                    <a href="#" class="forgot-password">Esqueci minha senha</a>
+                </div>
+
+                <button type="submit" class="submit-button">Entrar</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>Não tem uma conta? <a href="PaginaCadastro.html">Cadastre-se</a></p>
+        </footer>
+    </main>
+</body>
+
+</html>

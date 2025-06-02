@@ -1,0 +1,267 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(210, 116, 22, 0.533);
+    --text-color: #fff;
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-color);
+}
+
+/* Estilo do Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: var(--border);
+    background: var(--black);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 10rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo img {
+    border-radius: 50%;
+    border: 0.1rem solid var(--main-color);
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+}
+
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+.icons img:hover {
+    transform: scale(1.1);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+/* Estilo das Seções Principais */
+.home-container,
+#Ofertas,
+#Produtos,
+#Destaques {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-container {
+    background: url("./scr/img/principal.jpg");
+}
+
+#Ofertas {
+    background: rgba(1, 1, 3, 0.9);
+}
+
+#Produtos {
+    background: rgba(1, 1, 3, 0.9);
+}
+
+#Destaques {
+    background: rgba(1, 1, 3, 0.9);
+}
+
+/* Estilo do Conteúdo */
+.content {
+    max-width: 60rem;
+    z-index: 1;
+}
+
+.content h3 {
+    color: var(--text-color);
+    font-size: 6rem;
+    margin-bottom: 2rem;
+}
+
+.content p {
+    color: var(--text-color);
+    font-size: 2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--text-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span {
+    color: var(--main-color);
+}
+
+/* Estilo das Linhas de Conteúdo */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 5rem;
+}
+
+.container-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.container-image img {
+    max-width: 100%;
+    border-radius: 1rem;
+
+    transition: transform 0.3s ease;
+}
+
+.container-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo dos Botões */
+.btn {
+    background: var(--main-color);
+    color: var(--black);
+    padding: 1.5rem 3rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #b38a5a;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 3rem;
+    background: var(--black);
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header section {
+        padding: 1.5rem 2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 8rem;
+        right: -100%;
+        background: var(--black);
+        width: 80%;
+        height: calc(100vh - 8rem);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 3rem 0;
+        transition: right 0.3s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar a {
+        margin: 1.5rem 0;
+        font-size: 2rem;
+    }
+
+    .home-container,
+    #Ofertas,
+    #Produtos,
+    #Destaques {
+        padding: 8rem 2rem;
+        height: auto;
+        min-height: 100vh;
+        text-align: center;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .content h3 {
+        font-size: 4rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content h3 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.6rem;
+    }
+}
